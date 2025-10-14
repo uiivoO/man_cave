@@ -17,18 +17,29 @@ read-etc-hosts = true
 dns-server = system, 1.1.1.1
 fallback-dns-server = 223.5.5.5, 8.8.8.8
 
-# [Rule]
-# DOMAIN-SUFFIX,360.cn,DIRECT
-# DOMAIN-SUFFIX,360.com,DIRECT
-# DOMAIN-SUFFIX,qihoo.net,DIRECT
-# DOMAIN-SUFFIX,ccb.com,DIRECT
-# DOMAIN-SUFFIX,abcchina.com,DIRECT
-# DOMAIN-SUFFIX,abcchina.com.cn,DIRECT
-# DOMAIN,captive.apple.com,DIRECT
-# DOMAIN,passenger.t3go.cn,DIRECT
-# DOMAIN,wxh.wo.cn,DIRECT
-# DOMAIN,tv.micu.hk,DIRECT
+[Rule]
+# 内网IP段强制直连
+IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
 
-#[Host]
+# 本地域名直连
+DOMAIN-SUFFIX,local,DIRECT
+DOMAIN,localhost,DIRECT
+
+# 其他直连域名
+DOMAIN-SUFFIX,360.cn,DIRECT
+DOMAIN-SUFFIX,360.com,DIRECT
+DOMAIN-SUFFIX,qihoo.net,DIRECT
+DOMAIN-SUFFIX,ccb.com,DIRECT
+DOMAIN-SUFFIX,abcchina.com,DIRECT
+DOMAIN-SUFFIX,abcchina.com.cn,DIRECT
+DOMAIN,passenger.t3go.cn,DIRECT
+DOMAIN,wxh.wo.cn,DIRECT
+DOMAIN,tv.micu.hk,DIRECT
+
+[Host]
 # 内网域名永久缓存
-# +.qihoo.net = server:system
++.qihoo.net = server:system
