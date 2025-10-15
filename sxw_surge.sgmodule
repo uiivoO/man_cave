@@ -8,14 +8,14 @@ http-listen = 127.0.0.1:7891
 socks5-listen = 127.0.0.1:7890
 
 # 跳过代理的域名和IP段（仅保留保底的内网/本地地址）
-skip-proxy = %APPEND% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 100.64.0.0/10, fc00::/7, fe80::/10, localhost, *.local, qihoo.net
+skip-proxy = %APPEND% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, localhost, qihoo.net
 
 # 从 /etc/hosts 读取 DNS 记录
-read-etc-hosts = true
+# read-etc-hosts = true
 
 # DNS 服务器配置：交给系统自动切换，必要时回退到公共 DNS
-dns-server = system, 1.1.1.1
-fallback-dns-server = 223.5.5.5, 8.8.8.8
+# dns-server = system, 1.1.1.1
+# fallback-dns-server = 223.5.5.5, 8.8.8.8
 
 [Rule]
 # 内网IP段强制直连
@@ -30,16 +30,16 @@ DOMAIN-SUFFIX,local,DIRECT
 DOMAIN,localhost,DIRECT
 
 # 其他直连域名
-DOMAIN-SUFFIX,360.cn,DIRECT
-DOMAIN-SUFFIX,360.com,DIRECT
-DOMAIN-SUFFIX,qihoo.net,DIRECT
-DOMAIN-SUFFIX,ccb.com,DIRECT
-DOMAIN-SUFFIX,abcchina.com,DIRECT
-DOMAIN-SUFFIX,abcchina.com.cn,DIRECT
-DOMAIN,passenger.t3go.cn,DIRECT
-DOMAIN,wxh.wo.cn,DIRECT
-DOMAIN,tv.micu.hk,DIRECT
+# DOMAIN-SUFFIX,360.cn,DIRECT
+# DOMAIN-SUFFIX,360.com,DIRECT
+# DOMAIN-SUFFIX,qihoo.net,DIRECT
+# DOMAIN-SUFFIX,ccb.com,DIRECT
+# DOMAIN-SUFFIX,abcchina.com,DIRECT
+# DOMAIN-SUFFIX,abcchina.com.cn,DIRECT
+# DOMAIN,passenger.t3go.cn,DIRECT
+# DOMAIN,wxh.wo.cn,DIRECT
+# DOMAIN,tv.micu.hk,DIRECT
 
-[Host]
+# [Host]
 # 内网域名永久缓存
-+.qihoo.net = server:system
+# +.qihoo.net = server:system
