@@ -1,8 +1,18 @@
-#!name=Sxw Surge 高优先级规则
-#!desc=自定义高优先级规则，兼容多种订阅配置
+#!name=Sxw Surge
+#!desc=sxw 自用规则
 #!system=mac
 
 [General]
 # 代理监听配置
 http-listen = 127.0.0.1:7891
 socks5-listen = 127.0.0.1:7890
+# 内部域名依赖系统 DNS，公共 DNS 作为兜底
+dns-server = system, 1.1.1.1, 223.5.5.5
+fallback-dns-server = 10.228.78.131, 10.228.78.132
+# 跳过代理的域名和IP段（仅保留保底的内网/本地地址）
+skip-proxy = %APPEND% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 100.64.0.0/10, fc00::/7, fe80::/10, localhost, *.local, *.home.arpa, *.test
+
+[Rule]
+# 公司域名走直连，避免命中订阅策略组
+DOMAIN-SUFFIX,qihoo.net,DIRECT
+DOMAIN-SUFFIX,360.cn,DIRECT
