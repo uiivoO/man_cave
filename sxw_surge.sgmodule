@@ -6,3 +6,21 @@
 # 代理监听配置
 http-listen = 127.0.0.1:7891
 socks5-listen = 127.0.0.1:7890
+dns-server = system, 223.5.5.5, 8.8.8.8, 1.1.1.1
+use-local-host-item-for-proxy = true
+bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, fc00::/7
+exclude-simple-hostnames = true
+compatibility-mode = 1
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, ::1, fc00::/7
+
+[Host]
+*.qihoo.net = server:system
+*.360.cn = server:system
+qihoo.net = server:system
+360.cn = server:system
+
+[Rule]
+%INSERT% DOMAIN-SUFFIX,qihoo.net,DIRECT
+%INSERT% DOMAIN-SUFFIX,360.cn,DIRECT
+%INSERT% IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+%INSERT% IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
