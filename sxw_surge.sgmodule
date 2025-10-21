@@ -23,7 +23,23 @@ skip-proxy = %APPEND% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 10
 bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 169.254.0.0/16, 224.0.0.0/4, 255.255.255.255/32, fc00::/7, fe80::/10, ff00::/8, localhost, *.qihoo.net, *.360.cn
 
 [Host]
-# DNS自然降级处理，无需强制规则
+# 内网域名直接IP映射，绕过DNS解析
+# 由 update_surge_hosts.py 自动生成
+console.browser.qihoo.net = 11.136.224.158
+smkill8.mobi.zzzc.qihoo.net = 10.172.173.119
+mse.add.qihoo.net = 11.136.228.177
+wiki.mobilesafe.corp.qihoo.net = 10.16.94.60
+hulk.corp.qihoo.net = 10.220.192.90
+coding.qihoo.net = 10.220.162.213
+test.member.shouji.qihoo.net = 10.236.165.24
+test2.member.shouji.qihoo.net = 10.236.165.24
+
+# 泛域名DNS解析（作为备用）
+*.qihoo.net = server:10.228.78.131
+*.360.cn = server:10.228.78.132
+# 通用内网域名后缀使用系统DNS
+*.local = server:system
+*.lan = server:system
 
 [Rule]
 # 内网域名直连
