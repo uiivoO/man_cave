@@ -35,8 +35,8 @@ test.member.shouji.qihoo.net = 10.236.165.24
 test2.member.shouji.qihoo.net = 10.236.165.24
 
 # 泛域名DNS解析（作为备用）
-*.qihoo.net = server:10.228.78.131
-*.360.cn = server:10.228.78.132
+*.qihoo.net = server:system
+*.360.cn = server:system
 # 通用内网域名后缀使用系统DNS
 *.local = server:system
 *.lan = server:system
