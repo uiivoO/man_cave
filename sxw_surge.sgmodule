@@ -19,8 +19,8 @@ use-local-host-item-for-proxy = true
 ipv6-vif = auto
 
 # ========== 跳过代理 ==========
-skip-proxy = %APPEND% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 100.64.0.0/10, fc00::/7, fe80::/10, localhost, *.qihoo.net, *.360.cn
-bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 169.254.0.0/16, 224.0.0.0/4, 255.255.255.255/32, fc00::/7, fe80::/10, ff00::/8, localhost, *.qihoo.net, *.360.cn
+skip-proxy = %APPEND% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 100.64.0.0/10, fc00::/7, fe80::/10, localhost
+bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 169.254.0.0/16, 224.0.0.0/4, 255.255.255.255/32, fc00::/7, fe80::/10, ff00::/8, localhost
 
 [Host]
 # 内网域名直接IP映射，绕过DNS解析
@@ -36,7 +36,6 @@ test2.member.shouji.qihoo.net = 10.236.165.24
 
 # 泛域名DNS解析（作为备用）
 *.qihoo.net = server:system
-*.360.cn = server:system
 # 通用内网域名后缀使用系统DNS
 *.local = server:system
 *.lan = server:system
