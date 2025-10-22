@@ -10,8 +10,8 @@ socks5-listen = 127.0.0.1:7890
 # ========== DNS 配置 ==========
 # 外网DNS优先，内网DNS候补
 dns-server = 223.5.5.5, 1.1.1.1, system, 10.228.78.131, 10.228.78.132
-doh-server = https://223.5.5.5/dns-query, https://1.1.1.1/dns-query, https://8.8.8.8/dns-query
-encrypted-dns-follow-outbound-mode = true
+# doh-server = https://223.5.5.5/dns-query, https://1.1.1.1/dns-query, https://8.8.8.8/dns-query
+# encrypted-dns-follow-outbound-mode = true
 
 # ========== 性能优化 ==========
 hijack-dns = 8.8.8.8:53, 8.8.4.4:53
