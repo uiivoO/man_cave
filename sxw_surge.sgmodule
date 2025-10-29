@@ -37,6 +37,7 @@ hulk.corp.qihoo.net = 10.220.192.90
 coding.qihoo.net = 10.220.162.213
 test.member.shouji.qihoo.net = 10.236.165.24
 test2.member.shouji.qihoo.net = 10.236.165.24
+test.v5x.shouji.qihoo.net = 11.136.236.147
 
 # 泛域名DNS解析（作为备用）
 *.qihoo.net = server:system
