@@ -45,6 +45,7 @@ doc.qiwoo.org = 10.206.240.212
 
 # 泛域名DNS解析（作为备用）
 *.qihoo.net = server:system
+*.qiwoo.org = server:system
 # 通用内网域名后缀使用系统DNS
 *.local = server:system
 *.lan = server:system
