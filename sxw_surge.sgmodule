@@ -40,6 +40,7 @@ test2.member.shouji.qihoo.net = 10.236.165.24
 test.v5x.shouji.qihoo.net = 11.136.236.147
 yapi.mobile.qihoo.net = 10.216.193.105
 v.src.corp.qihoo.net = 10.16.22.20
+doc.qiwoo.org = 10.206.240.212
 
 # 泛域名DNS解析（作为备用）
 *.qihoo.net = server:system
