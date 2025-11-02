@@ -21,6 +21,7 @@ enhanced-mode-by-rule = true
 exclude-simple-hostnames = true
 show-error-page-for-reject = true
 always-real-ip = *.qihoo.net
+always-real-ip = *.qiwoo.org
 
 # ========== 跳过代理 ==========
 skip-proxy = %APPEND% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 100.64.0.0/10, fc00::/7, fe80::/10, localhost
@@ -44,7 +45,6 @@ doc.qiwoo.org = 10.206.240.212
 
 # 泛域名DNS解析（作为备用）
 *.qihoo.net = server:system
-*.qiwoo.org = server:system
 # 通用内网域名后缀使用系统DNS
 *.local = server:system
 *.lan = server:system
