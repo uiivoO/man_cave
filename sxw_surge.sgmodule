@@ -17,15 +17,14 @@ dns-server = system, 223.5.5.5, 1.1.1.1
 # hijack-dns = 223.5.5.5:53, 119.29.29.29:53
 use-local-host-item-for-proxy = true
 ipv6-vif = auto
-enhanced-mode-by-rule = true
+# enhanced-mode-by-rule = true
 exclude-simple-hostnames = true
 show-error-page-for-reject = true
-always-real-ip = *.qihoo.net
-always-real-ip = *.qiwoo.org
+always-real-ip = *.qihoo.net, *.qiwoo.org
 
 # ========== 跳过代理 ==========
 skip-proxy = %APPEND% 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 100.64.0.0/10, fc00::/7, fe80::/10, localhost
-bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 169.254.0.0/16, 224.0.0.0/4, 255.255.255.255/32, fc00::/7, fe80::/10, ff00::/8, localhost
+# bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.0/8, 169.254.0.0/16, 224.0.0.0/4, 255.255.255.255/32, fc00::/7, fe80::/10, ff00::/8, localhost
 
 [Host]
 # 内网域名直接IP映射，绕过DNS解析
@@ -42,6 +41,7 @@ test.v5x.shouji.qihoo.net = 11.136.236.147
 yapi.mobile.qihoo.net = 10.216.193.105
 v.src.corp.qihoo.net = 10.16.22.20
 doc.qiwoo.org = 10.206.240.212
+geelib.qihoo.net = 10.16.101.51
 
 # 泛域名DNS解析（作为备用）
 *.qihoo.net = server:system
