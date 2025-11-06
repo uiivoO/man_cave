@@ -12,7 +12,7 @@ allow-lan: false
 # - rule: 规则模式
 # - global: 全局代理模式
 # - direct: 直连模式
-mode: rule
+mode: global
 
 # 日志级别
 # silent / error / warning / info / debug
@@ -66,8 +66,8 @@ proxies:
 
 # 代理组配置
 proxy-groups:
-  # 手动选择代理
-  - name: "PROXY"
+  # 全局选择代理
+  - name: "GLOBAL"
     type: select
     proxies:
       - "debug"
@@ -75,57 +75,3 @@ proxy-groups:
       - "saber5_8888"
       - "saber5_9000"
       - "DIRECT"
-
-  # 自动选择最快节点
-  - name: "AUTO"
-    type: url-test
-    proxies:
-      - "debug"
-      - "saber5_9090"
-      - "saber5_8888"
-      - "saber5_9000"
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-
-  # 负载均衡
-  - name: "LOAD-BALANCE"
-    type: load-balance
-    proxies:
-      - "debug"
-      - "saber5_9090"
-      - "saber5_8888"
-      - "saber5_9000"
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-
-# 规则配置
-rules:
-  # 局域网直连
-  - DOMAIN-SUFFIX,local,DIRECT
-  - IP-CIDR,127.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,100.64.0.0/10,DIRECT
-  - IP-CIDR,224.0.0.0/4,DIRECT
-  - IP-CIDR,fe80::/10,DIRECT
-
-  # 常用国内网站直连
-  - DOMAIN-SUFFIX,cn,DIRECT
-  - DOMAIN-KEYWORD,baidu,DIRECT
-  - DOMAIN-KEYWORD,taobao,DIRECT
-  - DOMAIN-KEYWORD,qq,DIRECT
-  - DOMAIN-KEYWORD,weixin,DIRECT
-  - DOMAIN-KEYWORD,alipay,DIRECT
-
-  # 国外网站走代理
-  - DOMAIN-SUFFIX,google.com,PROXY
-  - DOMAIN-SUFFIX,youtube.com,PROXY
-  - DOMAIN-SUFFIX,facebook.com,PROXY
-  - DOMAIN-SUFFIX,twitter.com,PROXY
-  - DOMAIN-SUFFIX,instagram.com,PROXY
-  - DOMAIN-SUFFIX,github.com,PROXY
-
-  # 最终规则
-  - GEOIP,CN,DIRECT
-  - MATCH,PROXY
