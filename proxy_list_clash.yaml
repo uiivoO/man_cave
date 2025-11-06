@@ -64,6 +64,13 @@ proxies:
     # username: username
     # password: password
 
+  - name: "home_9000"
+    type: http
+    server: 192.168.100.120
+    port: 9000
+    # username: username
+    # password: password
+
 # 代理组配置
 proxy-groups:
   # 全局选择代理
