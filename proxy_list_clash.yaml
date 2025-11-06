@@ -69,4 +69,5 @@ proxy-groups:
       - "saber5_9090"
       - "saber5_8888"
       - "saber5_9000"
+      - "home_9000"
       - "DIRECT"
