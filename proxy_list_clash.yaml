@@ -39,19 +39,19 @@ proxies:
     server: 192.168.100.120
     port: 9090
 
-  - name: "saber5_9090"
+  - name: "saber_149_9090"
     type: http
-    server: 192.168.67.23
+    server: 192.168.67.149
     port: 9090
 
-  - name: "saber5_8888"
+  - name: "saber_149_8888"
     type: http
-    server: 192.168.67.23
+    server: 192.168.67.149
     port: 8888
 
-  - name: "saber5_9000"
+  - name: "saber_149_9000"
     type: http
-    server: 192.168.67.23
+    server: 192.168.67.149
     port: 9000
 
   - name: "home_9000"
