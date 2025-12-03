@@ -1,38 +1,21 @@
 # Clash 移动端代理配置文件
-# 基于 proxy_list.conf 生成
-# 适用于手机端 Clash 客户端（Clash for Android / ClashX Pro）
 
-# 混合端口配置
 mixed-port: 7890
-
-# 允许局域网连接
 allow-lan: false
-
-# Clash 运行模式
-# - rule: 规则模式
-# - global: 全局代理模式
-# - direct: 直连模式
 mode: global
-
-# 日志级别
-# silent / error / warning / info / debug
 log-level: info
 
-# DNS 配置
 dns:
   enable: true
-  listen: 0.0.0.0:53
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
-    - 114.114.114.114
   fallback:
     - 8.8.8.8
     - 1.1.1.1
 
-# 代理服务器配置
 proxies:
   - name: "debug"
     type: http
@@ -54,20 +37,12 @@ proxies:
     server: 192.168.67.149
     port: 9000
 
-  - name: "home_9000"
-    type: http
-    server: 192.168.100.144
-    port: 9000
-
-# 代理组配置
 proxy-groups:
-  # 全局选择代理
   - name: "GLOBAL"
     type: select
     proxies:
       - "debug"
-      - "saber5_9090"
-      - "saber5_8888"
-      - "saber5_9000"
-      - "home_9000"
+      - "saber_149_9090"
+      - "saber_149_8888"
+      - "saber_149_9000"
       - "DIRECT"
