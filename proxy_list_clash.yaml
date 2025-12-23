@@ -22,19 +22,19 @@ proxies:
     server: 192.168.100.120
     port: 9090
 
-  - name: "saber_128_9090"
+  - name: "saber_149_9090"
     type: http
-    server: 192.168.67.128
+    server: 192.168.67.149
     port: 9090
 
-  - name: "saber_128_8888"
+  - name: "saber_149_8888"
     type: http
-    server: 192.168.67.128
+    server: 192.168.67.149
     port: 8888
 
-  - name: "saber_128_9000"
+  - name: "saber_149_9000"
     type: http
-    server: 192.168.67.128
+    server: 192.168.67.149
     port: 9000
 
 proxy-groups:
@@ -42,7 +42,7 @@ proxy-groups:
     type: select
     proxies:
       - "debug"
-      - "saber_128_9090"
-      - "saber_128_8888"
-      - "saber_128_9000"
+      - "saber_149_9090"
+      - "saber_149_8888"
+      - "saber_149_9000"
       - "DIRECT"
