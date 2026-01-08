@@ -48,7 +48,6 @@ yapi.mobile.qihoo.net = 10.216.193.105
 v.src.corp.qihoo.net = 10.16.22.20
 doc.qiwoo.org = 10.206.240.212
 geelib.qihoo.net = 10.16.101.51
-c.mse.360.cn = 198.18.2.58
 
 # 泛域名DNS解析（作为备用）
 # 使用 syslib 而不是 system，以利用 macOS 系统级解析器处理复杂的内网 DNS/VPN 环境
@@ -58,7 +57,6 @@ c.mse.360.cn = 198.18.2.58
 # 通用内网域名后缀使用系统库解析 (syslib)
 *.local = server:syslib
 *.lan = server:syslib
-
 [Rule]
 # 内网域名直连
 DOMAIN-SUFFIX,qihoo.net,DIRECT
