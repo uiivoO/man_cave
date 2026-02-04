@@ -59,6 +59,8 @@ device.mobilesafe.corp.qihoo.net = 10.16.49.74
 *.local = server:syslib
 *.lan = server:syslib
 [Rule]
+# 指定 IP 直连（由 update_surge_hosts.py 自动生成）
+IP-CIDR,8.213.207.142/32,DIRECT,no-resolve
 # 内网域名直连
 DOMAIN-SUFFIX,qihoo.net,DIRECT
 DOMAIN-SUFFIX,qiwoo.org,DIRECT
