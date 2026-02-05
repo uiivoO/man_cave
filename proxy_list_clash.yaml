@@ -19,6 +19,30 @@ proxies:
   type: http
   server: 192.168.67.149
   port: 9090
+- name: saber_149_9110
+  type: http
+  server: 192.168.67.149
+  port: 9110
+- name: saber_142_9000
+  type: http
+  server: 192.168.67.142
+  port: 9000
+- name: saber_142_9001
+  type: http
+  server: 192.168.67.142
+  port: 9001
+- name: saber_142_8888
+  type: http
+  server: 192.168.67.142
+  port: 8888
+- name: saber_142_9090
+  type: http
+  server: 192.168.67.142
+  port: 9090
+- name: saber_142_9110
+  type: http
+  server: 192.168.67.142
+  port: 9110
 proxy-groups:
 - name: GLOBAL
   type: select
@@ -27,4 +51,10 @@ proxy-groups:
   - saber_149_9001
   - saber_149_8888
   - saber_149_9090
+  - saber_149_9110
+  - saber_142_9000
+  - saber_142_9001
+  - saber_142_8888
+  - saber_142_9090
+  - saber_142_9110
   - DIRECT
