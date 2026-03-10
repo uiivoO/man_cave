@@ -49,6 +49,8 @@ v.src.corp.qihoo.net = 10.16.22.20
 doc.qiwoo.org = 10.206.240.212
 geelib.qihoo.net = 10.16.101.51
 device.mobilesafe.corp.qihoo.net = 10.16.49.74
+test.conf.mobile.qihoo.net = 11.136.236.84
+conf.mobile.qihoo.net = 10.242.7.179
 
 # 泛域名DNS解析（作为备用）
 # 使用 syslib 而不是 system，以利用 macOS 系统级解析器处理复杂的内网 DNS/VPN 环境
