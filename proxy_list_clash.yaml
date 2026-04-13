@@ -1,5 +1,4 @@
 mixed-port: 7890
-allow-lan: false
 mode: global
 log-level: info
 proxies:
@@ -33,3 +32,5 @@ proxy-groups:
   - saber_149_9090
   - saber_149_9110
   - DIRECT
+rules:
+- MATCH,GLOBAL
