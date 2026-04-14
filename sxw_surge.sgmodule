@@ -57,6 +57,8 @@ conf.mobile.qihoo.net = 10.242.7.179
 *.qihoo.net = server:syslib
 *.qiwoo.org = server:syslib
 *.corp.qihoo.net = server:syslib
+# cloud-nodes 域名使用指定 DNS 服务器解析
+*.cloud-nodes.com = server:124.221.68.73:1053
 # 通用内网域名后缀使用系统库解析 (syslib)
 *.local = server:syslib
 *.lan = server:syslib
