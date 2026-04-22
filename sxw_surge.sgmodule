@@ -52,6 +52,9 @@ device.mobilesafe.corp.qihoo.net = 10.16.49.74
 test.conf.mobile.qihoo.net = 11.136.236.84
 conf.mobile.qihoo.net = 10.242.7.179
 
+# 远程模块 DNS 配置（来自 oixcloud.sgmodule）
+*.cloud-nodes.com = server:124.221.68.73:1053
+
 # 泛域名DNS解析（作为备用）
 # 使用 syslib 而不是 system，以利用 macOS 系统级解析器处理复杂的内网 DNS/VPN 环境
 *.qihoo.net = server:syslib
