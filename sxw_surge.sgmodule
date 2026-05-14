@@ -66,9 +66,14 @@ aiwork.mg.qihoo.net = 10.146.250.47
 *.local = server:syslib
 *.lan = server:syslib
 [Rule]
-# 指定 IP 直连（由 update_surge_hosts.py 自动生成）
+# 指定 IP 直连（DIRECT_IPS，手动维护）
 IP-CIDR,8.213.207.142/32,DIRECT,no-resolve
 IP-CIDR,47.251.54.144/32,DIRECT,no-resolve
+# 域名解析出的公网 IP 直连（由 update_surge_hosts.py 自动生成）
+IP-CIDR,11.136.224.158/32,DIRECT,no-resolve
+IP-CIDR,11.136.228.177/32,DIRECT,no-resolve
+IP-CIDR,11.136.236.147/32,DIRECT,no-resolve
+IP-CIDR,11.136.236.84/32,DIRECT,no-resolve
 # 内网域名直连
 DOMAIN-SUFFIX,qihoo.net,DIRECT
 DOMAIN-SUFFIX,qiwoo.org,DIRECT
