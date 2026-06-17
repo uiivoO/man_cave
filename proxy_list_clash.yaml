@@ -22,6 +22,26 @@ proxies:
   type: http
   server: 192.168.67.149
   port: 9110
+- name: surge_1_9000
+  type: http
+  server: 192.168.2.1
+  port: 9000
+- name: surge_1_9001
+  type: http
+  server: 192.168.2.1
+  port: 9001
+- name: surge_1_8888
+  type: http
+  server: 192.168.2.1
+  port: 8888
+- name: surge_1_9090
+  type: http
+  server: 192.168.2.1
+  port: 9090
+- name: surge_1_9110
+  type: http
+  server: 192.168.2.1
+  port: 9110
 proxy-groups:
 - name: GLOBAL
   type: select
@@ -31,6 +51,11 @@ proxy-groups:
   - saber_149_8888
   - saber_149_9090
   - saber_149_9110
+  - surge_1_9000
+  - surge_1_9001
+  - surge_1_8888
+  - surge_1_9090
+  - surge_1_9110
   - DIRECT
 rules:
 - MATCH,GLOBAL
